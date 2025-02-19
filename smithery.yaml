@@ -1,0 +1,17 @@
+# Smithery configuration file: https://smithery.ai/docs/config#smitheryyaml
+
+startCommand:
+  type: stdio
+  configSchema:
+    # JSON Schema defining the configuration options for the MCP.
+    type: object
+    required:
+      - comfyUrl
+    properties:
+      comfyUrl:
+        type: string
+        description: The URL for the Comfy server, including port.
+  commandFunction:
+    # A function that produces the CLI command to start the MCP on stdio.
+    |-
+    (config) => ({command:'python',args:['comfy-mcp-server.py'],env:{COMFY_URL:config.comfyUrl}})

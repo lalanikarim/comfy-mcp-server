@@ -1,5 +1,7 @@
 # Comfy MCP Server
 
+[![smithery badge](https://smithery.ai/badge/@lalanikarim/comfy-mcp-server)](https://smithery.ai/server/@lalanikarim/comfy-mcp-server)
+
 > A server using FastMCP framework to generate images based on prompts via a remote Comfy server.
 
 ## Overview
